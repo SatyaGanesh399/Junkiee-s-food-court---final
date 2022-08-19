@@ -11,6 +11,7 @@ const orderMore = () =>{
     orderItems.style.display = 'block';
     statusBar.style.display = 'none';
     finalNote.style.display = 'none';
+    document.getElementById('alert-id').style.display = 'none'
 }
 let card0 = document.getElementsByClassName('order-status-block')[0]
 let card1 = document.getElementsByClassName('order-status-block')[1]
