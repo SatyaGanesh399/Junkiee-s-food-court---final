@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Order Management</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <nav class="navbar navbar-expand-lg navigation-bar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Junkiee's Food Court</a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"
+                        id="navbarNavAltMarkup">
+                        <div class="navbar-nav navbar-menu">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" href="#">Specials</a>
+                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="alert alert-success" id="alert-id">
+            <strong>Order Placed!</strong> Your OrderID is : JFC08
+          </div>
+        <div class="place-order" id="order-menu">
+            <h3>Today's Specials</h3>
+            <h4>20% - 35% off on the items</h4>
+            <div class="order-items">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card order-item" style="width: 18rem;">
+                            <img src="download.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Pepperoni Pizza</h5>
+                                <h6>Cost = <b>3.25$</b></h6>
+                                <h6>35% discount | Valid - Today</h6>
+                                <a href="#" class="btn btn-primary"
+                                    onclick="hideItems()">Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card order-item" style="width: 18rem;">
+                            <img src="mushroom.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mushroom Pizza</h5>
+                                <h6>Cost = <b>2.75$</b></h6>
+                                <h6>25% discount | Valid - Today</h6>
+                                <a href="#" class="btn btn-primary"
+                                    onclick="hideItems()">Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card order-item" style="width: 18rem;">
+                            <img src="hawaiian-pizza.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hawaian Pizza</h5>
+                                <h6>Cost = <b>$2.50$</b></h6>
+                                <h6>25% discount | Valid - Today</h6>
+                                <a href="#" class="btn btn-primary"
+                                    onclick="hideItems()">Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card order-item" style="width: 18rem;">
+                            <img src="pizza4.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cloud Bread Pizza</h5>
+                                <h6>Cost = <b>1.75$</b></h6>
+                                <h6>20% discount | Valid - Today</h6>
+                                <a href="#" class="btn btn-primary"
+                                    onclick="hideItems()">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+
+            <div class="container" id="order-status-chart">
+                <div class="input-group mb-md-3 order-search search-bar">
+                    <input type="text" class="form-control" placeholder="Enter
+                        OrderID" id="entered-orderId">
+                    <button class="btn btn-dark" type="button"
+                        id="button-addon2 order-button"
+                        onclick="executeOrder()">Order
+                        Status</button>
+                </div>
+                <div id="invalid-alert">
+                    *  please enter proper OrderID  *
+                </div>
+                <h4 id="order-title" class="text-center"></h4>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">Order Placed</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">chef received the order and started
+                    preparing</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">pizza sause added</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">first layer of cheese added</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">Toppings added</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">Second layer of cheese added</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">pizza baked</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">oregano added and packed</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">Package received at counter</button>
+                <button type="button" class="btn btn-light btn-lg
+                    order-status-block">The order is ready to handover</button>
+            </div>
+            <div class="thank-you" id="final-note">
+                <h3 id="collect-order">Please wait till the order is ready</h3>
+                <br>
+                <br>
+                <h4 id="thank">To order more</h4>
+                <h5 id="visit-again">Click Below</h5>
+
+                <a href="#" class="btn btn-light"
+                                    onclick="orderMore()">Order More</a>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

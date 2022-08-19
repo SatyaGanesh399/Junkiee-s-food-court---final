@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(background2.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+}
+#alert-id{
+    width: 50%;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    display: none;
+}
+.place-order h3{
+    color: #cfd9df;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.place-order h4{
+    color: #cfd9df;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.container{
+    margin: 40px;
+    padding : 30px;
+    border: 1px solid grey;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
+.search-bar{
+    width: 25rem;
+    margin: 20px auto;
+    padding: 25px;
+}
+#invalid-alert{
+    display: none;
+    color: #cfd9df;
+    text-align: center;
+    
+}
+.order-status-block{
+    display: block;
+    margin: 15px auto;
+    width: 70%;
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+.text-center{
+    text-align: center;
+}
+.container h2{
+    margin: 20px auto;
+    text-align: center;
+}
+.order-items .order-item{
+    margin: 20px auto;
+}
+.place-order{
+    text-align: center;
+}
+.navigation-bar{
+    margin-top: -10px;
+    width: 100%;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+.container, .thank-you{
+    display: none;
+}
+ .place-order{
+    display: block;
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.thank-you{
+    color: #e2ebf0;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    padding: 20px auto;
+}
+.thank-you a{
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container{
+        width: 80%;
+    }
+  }
